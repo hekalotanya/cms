@@ -10,7 +10,7 @@ export const NewArticle = () => {
   });
   const [message, setMessage] = useState({
     type: '',
-    message: '',
+    body: '',
   });
 
   const handleSubmit = useCallback(async() => {
@@ -21,7 +21,7 @@ export const NewArticle = () => {
     if (!trimmedTitle || !trimmedBody) {
       setMessage({
         type: 'error',
-        message: 'All fields are required!',
+        body: 'All fields are required!',
       });
       setValues({
         title: trimmedTitle,
@@ -40,12 +40,12 @@ export const NewArticle = () => {
       });
       setMessage({
         type: 'posted',
-        message: article.message,
+        body: article.message,
       });
     } else {
       setMessage({
         type: 'error',
-        message: article.message,
+        body: article.message,
       });
     }
   }, [values]);
@@ -53,7 +53,7 @@ export const NewArticle = () => {
   const handleChange = useCallback(({ target: { name, value } }) => {
     setMessage({
       type: '',
-      message: '',
+      body: '',
     });
     setValues(prev => ({
       ...prev,
@@ -87,7 +87,7 @@ export const NewArticle = () => {
             />
           </Form.Field>
           {message
-            && <div className={`${message.type}`}>{message.message}</div>
+            && <div className={`${message.type}`}>{message.body}</div>
           }
           <Button type="submit">Create an Article</Button>
         </Form>
