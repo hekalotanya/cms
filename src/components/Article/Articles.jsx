@@ -17,7 +17,7 @@ export const Articles = () => {
 
   useEffect(() => {
     fetchArticles();
-  }, []);
+  }, [fetchArticles]);
 
   return (
     <div>
