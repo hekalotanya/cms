@@ -1,0 +1,39 @@
+@import "./styles/utils/";
+@import "./styles/fonts";
+@import "./styles/typography";
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background: $c-gray;
+  margin: 0;
+  padding: 0;
+  * {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: unset;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.navigation {
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $c-light-pink;
+
+  &__item {
+    list-style-type: none;
+    color: $c-navlink;
+
+    a {
+      text-decoration: none;
+    }
+
+    &--active {
+      color: $c-navlink-active;
+    }
+  }
+}

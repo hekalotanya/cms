@@ -1,0 +1,26 @@
+@import "../../styles/utils";
+
+.container {
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 70%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form {
+  width: 90%;
+}
+
+.error {
+  color: $c-error;
+}
+
+.posted {
+  color: $c-success;
+}
